@@ -1,0 +1,6 @@
+@startuml
+
+:Client System: <-down-> (DBTURatingServices): Queries the \n Service via REST
+(DBTURatingServices) <-down-> (http://bordtennisportalen.dk): Does screenscraping of the \n printerfriendly rating pages
+
+@enduml

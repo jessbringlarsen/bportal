@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Haltalk</title>
+    <link href="/assets/application-d9cf6a48837d1644054bf85aef8a8769.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="/assets/application-1afdbdbba9bd73c82235c5ea9776a601.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1 class="page-header">clubMembership</h1>
+
+<div class="well method">
+    <h2>POST</h2>
+
+    <p class="description">
+        Create a relation between a club and a player
+    </p>
+
+    <div class="request">
+        <h3>Request</h3>
+
+        <div class="type">
+            <h4>Headers</h4>
+
+            <div>The request should have the Content-Type application/json</div>
+        </div>
+        <div class="body">
+            <h4>Body</h4>
+
+            <div class="required">
+                <h5>Required properties</h5>
+                <ul>
+                    <li><strong>player</strong>: player</li>
+                </ul>
+                <ul>
+                    <li><strong>club</strong>: club</li>
+                </ul>
+                <ul>
+                    <li><strong>memberFrom</strong>: yyyy-MM-dd</li>
+                </ul>
+            </div>
+            <div class="optional">
+                <h5>Optional properties</h5>
+                <ul>
+                    <li><strong>memberTo</strong> : yyyy-MM-dd</li>
+                </ul>
+            </div>
+            <div class="example">
+                <h5>Example</h5>
+        <pre>
+{
+  "player": "http://localhost:8080/api/players/1",
+  "club": "http://localhost:8080/api/clubs/1",
+  "memberFrom": "2016-01-03"
+}
+        </pre>
+            </div>
+        </div>
+    </div>
+    <div class="response">
+        <h3>Responses</h3>
+
+        <div class="code">
+            <h4>201 Created</h4>
+
+            <div class="headers">
+                <h5>Headers</h5>
+                <ul>
+                    <li>Location: URI of the created <a href="/rels/player">player</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

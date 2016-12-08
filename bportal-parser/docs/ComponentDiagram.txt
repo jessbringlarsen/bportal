@@ -1,0 +1,7 @@
+@startuml
+
+[Scraping Component]
+[REST Componet]
+
+
+@enduml

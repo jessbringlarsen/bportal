@@ -1,0 +1,4 @@
+rootProject.name = 'bportal'
+include 'bportal-parser'
+include 'bportal-app'
+

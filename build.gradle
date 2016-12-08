@@ -1,0 +1,35 @@
+subprojects {
+    group 'dk.bringlarsen.bportal'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'findbugs'
+    apply plugin: 'maven-publish'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    publishing {
+        repositories {
+            maven {
+                url "$buildDir/repo"
+            }
+        }
+    }
+
+    tasks.withType(FindBugs) {
+        reports {
+            xml.enabled false
+            html.enabled true
+        }
+    }
+}
+
+project(':bportal-app') {
+    dependencies {
+        compile project(':bportal-parser')
+    }
+}
